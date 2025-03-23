@@ -13,12 +13,15 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
- permission : 
-  contents : read 
+  
 jobs:
   build:
 
     runs-on: ubuntu-latest
+
+     permissions:
+      contents: write      # Needed to access repository contents
+      dependency-graph: write  # Allow write access to dependency graph
 
     steps:
     - uses: actions/checkout@v4
