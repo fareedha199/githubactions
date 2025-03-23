@@ -18,6 +18,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write        # Needed for read/write access to the repository content
+      
 
     steps:
     - uses: actions/checkout@v4
